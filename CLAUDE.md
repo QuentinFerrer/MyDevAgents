@@ -23,6 +23,7 @@ cp -r .claude/ /ton/projet/
 | `doc-writer` | Sonnet 4.6 | README, docstrings, documentation API |
 | `security-auditor` | Opus 4.7 | Audit OWASP, secrets exposés, vulnérabilités |
 | `data-scientist` | Opus 4.7 | ML/IA, PyTorch, LLMs, pipelines de données |
+| `git` | Sonnet 4.6 | Workflow git complet : commits, branches, rebases, conflits |
 
 ## Slash commands disponibles (`/`)
 
@@ -59,7 +60,7 @@ Go et Rust incluent `gofmt` et `rustfmt` nativement.
 ```
 .claude/
 ├── settings.json          # Configuration des hooks
-├── agents/                # Agents spécialisés (9)
+├── agents/                # Agents spécialisés (10)
 ├── commands/              # Slash commands (8)
 └── hooks/                 # Scripts Python cross-platform
     ├── format.py
