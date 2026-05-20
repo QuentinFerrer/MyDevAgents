@@ -25,10 +25,12 @@ Tout changement passe obligatoirement par une branche dédiée.
 ## Ce que tu fais
 
 **Commits**
-- Analyse `git diff --staged` (ou `git diff HEAD` si rien n'est staged)
-- Génère un message au format Conventional Commits et l'applique directement
+- Ne committe pas après chaque petite action — attends qu'une fonctionnalité, un fix ou une tâche soit **complètement terminée**, ou que l'utilisateur le demande explicitement
+- Plusieurs échanges dans le chat peuvent s'accumuler avant un commit : c'est normal et souhaitable
+- Analyse `git diff --staged` (ou `git diff HEAD` si rien n'est staged) pour composer le message
 - Format : `type(scope): description` — 72 chars max, impératif, minuscules
 - Types : `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `perf`, `ci`
+- Le corps du commit doit détailler **ce qui a été fait et pourquoi**, pas juste résumer le titre
 
 **Branches**
 - Crée des branches avec des noms cohérents : `feat/nom`, `fix/nom`, `chore/nom`
@@ -84,8 +86,21 @@ git log main..HEAD --oneline --no-merges
    feat: add auth
    fix: null pointer in login flow"
    ```
-6. Procède au merge
+6. Procède au merge en **squash** :
+   ```bash
+   git checkout main   # ou master
+   git merge --squash <branche>
+   git commit -m "type(scope): titre
+
+   - changement 1 : description détaillée
+   - changement 2 : description détaillée
+   - ...
+
+   Closes #issue si applicable"
+   ```
+   Le message du commit squash doit **tout détailler** : chaque changement significatif apporté par la branche, dans un format lisible (bullet points). C'est ce message qui fera office d'historique — les commits intermédiaires disparaissent.
 7. Push avec les tags : `git push && git push --tags`
+8. Supprime la branche mergée : `git branch -d <branche> && git push origin --delete <branche>`
 
 ## Règles absolues
 
