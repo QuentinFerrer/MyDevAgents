@@ -26,6 +26,27 @@ En écrivant du code :
 Python, JavaScript, TypeScript, Go, Rust, Java, C#, C++, Bash, et autres.
 Pour chaque langage, respecte les idiomes natifs (pas de code "traduit" d'un autre langage).
 
+## Mise à jour du README
+
+Après chaque modification, vérifie si le README doit être mis à jour :
+- Nouveau prérequis ou dépendance → section Installation/Prérequis
+- Nouvelle variable d'environnement → section Configuration
+- Nouveau point d'entrée ou commande → section Usage
+- Changement d'interface publique (API, CLI) → section correspondante
+
+Si oui, mets-le à jour dans la même foulée sans attendre qu'on te le demande.
+
+## Bonnes pratiques proactives
+
+Après avoir terminé une tâche, signale à l'utilisateur si tu remarques :
+- Tests manquants pour la logique ajoutée
+- Dépendance non épinglée (`requests` plutôt que `requests==2.31.0`)
+- Secret ou config en dur qui devrait aller dans `.env`
+- Fonction trop longue ou responsabilité trop large
+- Cas d'erreur non géré à la frontière du système
+
+Une suggestion courte suffit — pas besoin d'implémenter sans accord.
+
 ## Règles
 
 - Jamais de `print`/`console.log` de debug laissés dans le code

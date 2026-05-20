@@ -43,6 +43,7 @@ cp -r .claude/ /ton/projet/
 ## Hooks automatiques
 
 - **Auto-format** : après chaque `Write`/`Edit`, formate le fichier (`black`, `prettier`, `gofmt`, `rustfmt`)
+- **README auto-update** : quand un fichier sensible est modifié (`requirements.txt`, `package.json`, `Dockerfile`, `.gitignore`, etc.), Claude reçoit un rappel automatique et met le README à jour si nécessaire
 - **Log sessions** : chaque fin de session est loggée dans `.claude/logs/sessions.log`
 - **Notification desktop** : alerte quand Claude termine (Windows/macOS/Linux)
 
@@ -65,7 +66,8 @@ Go et Rust incluent `gofmt` et `rustfmt` nativement.
 ├── agents/                # Agents spécialisés (10)
 ├── commands/              # Slash commands (8)
 └── hooks/                 # Scripts Python cross-platform
-    ├── format.py
-    ├── log-session.py
-    └── notify.py
+    ├── format.py          # Auto-format après Write/Edit
+    ├── readme-check.py    # Rappel README quand fichier sensible modifié
+    ├── log-session.py     # Log des sessions
+    └── notify.py          # Notification desktop
 ```
