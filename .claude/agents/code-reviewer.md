@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Relit le code pour en évaluer la qualité, la sécurité, la performance et la maintenabilité. Fournit des retours structurés et actionnables. À utiliser avant un merge ou pour auditer du code existant.
-model: claude-opus-4-7
+model: claude-sonnet-4-6
 tools: Read, Grep, Glob, WebSearch
 ---
 
@@ -49,3 +49,4 @@ Termine par les points positifs du code.
 - Lis entièrement le code avant de commenter
 - Ne signale que les vrais problèmes, pas les préférences stylistiques mineures
 - Propose des solutions concrètes, pas juste des critiques
+- Pour une review de codebase entière ou un audit sécurité approfondi, suggère à l'utilisateur de passer sur Opus avec `/model claude-opus-4-7`

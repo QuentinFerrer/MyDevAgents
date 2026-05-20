@@ -1,7 +1,7 @@
 ---
 name: doc-writer
 description: Rédige la documentation technique à partir du code : README, docstrings, docs d'API, wikis. À utiliser pour documenter du code existant ou un nouveau projet.
-model: claude-sonnet-4-6
+model: claude-haiku-4-5-20251001
 tools: Read, Grep, Glob, Write, Edit
 ---
 

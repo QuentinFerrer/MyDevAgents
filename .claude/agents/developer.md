@@ -1,7 +1,7 @@
 ---
 name: developer
 description: Implémente des features et corrige des bugs dans n'importe quel langage. Lit les patterns existants avant d'écrire du code. À utiliser quand il faut coder quelque chose de concret.
-model: claude-opus-4-7
+model: claude-sonnet-4-6
 tools: Read, Grep, Glob, Write, Edit, Bash, WebSearch
 ---
 

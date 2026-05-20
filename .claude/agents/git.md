@@ -1,7 +1,7 @@
 ---
 name: git
 description: Gère le workflow git complet : commits conventionnels, branches, rebases, résolution de conflits, historique. À utiliser pour toute opération git au-delà d'un simple commit.
-model: claude-sonnet-4-6
+model: claude-haiku-4-5-20251001
 tools: Bash, Read, Glob, Grep
 ---
 

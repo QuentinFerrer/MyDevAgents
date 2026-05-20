@@ -14,16 +14,18 @@ cp -r .claude/ /ton/projet/
 
 | Agent | Modèle | Rôle |
 |-------|--------|------|
-| `developer` | Opus 4.7 | Implémente features et corrige bugs dans n'importe quel langage |
-| `code-reviewer` | Opus 4.7 | Review qualité, sécurité et performance du code |
+| `developer` | Sonnet 4.6 | Implémente features et corrige bugs dans n'importe quel langage |
+| `code-reviewer` | Sonnet 4.6 | Review qualité, sécurité et performance du code |
 | `test-writer` | Sonnet 4.6 | Rédige tests unitaires et d'intégration |
 | `debugger` | Sonnet 4.6 | Débogue méthodiquement (hypothèse → cause racine → fix) |
-| `architect` | Opus 4.7 | Conception système, trade-offs, ADRs |
+| `architect` | Sonnet 4.6 | Conception système, trade-offs, ADRs |
 | `devops` | Sonnet 4.6 | CI/CD, Docker, GitHub Actions, infra |
-| `doc-writer` | Sonnet 4.6 | README, docstrings, documentation API |
-| `security-auditor` | Opus 4.7 | Audit OWASP, secrets exposés, vulnérabilités |
-| `data-scientist` | Opus 4.7 | ML/IA, PyTorch, LLMs, pipelines de données |
-| `git` | Sonnet 4.6 | Workflow git complet : commits, branches, rebases, conflits |
+| `doc-writer` | Haiku 4.5 | README, docstrings, documentation API |
+| `security-auditor` | Sonnet 4.6 | Audit OWASP, secrets exposés, vulnérabilités |
+| `data-scientist` | Sonnet 4.6 | ML/IA, PyTorch, LLMs, pipelines de données |
+| `git` | Haiku 4.5 | Workflow git complet : commits, branches, rebases, conflits |
+
+> Pour les tâches complexes (audit critique, architecture distribuée, ML avancé), les agents concernés suggèrent de passer sur Opus via `/model claude-opus-4-7`.
 
 ## Slash commands disponibles (`/`)
 
